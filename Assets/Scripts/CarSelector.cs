@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CarSelector : MonoBehaviour
 {
+    [SerializeField]
+    private Transform carSpawnLocation;
+    [SerializeField]
+    private string nextScene;
+
     // Start is called before the first frame update
     void Start()
     {
