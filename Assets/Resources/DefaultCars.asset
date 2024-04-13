@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab01d14a493dccd4b9d9474e08e1e2ec, type: 3}
   m_Name: DefaultCars
   m_EditorClassIdentifier: 
-  cars:
+  Cars:
   - {fileID: 2184757977882861935, guid: ca8f8ed83b4d6f047b208e735e801a23, type: 3}
   - {fileID: 723192165648917962, guid: 497f90e102789c844a033b49bc4d23cb, type: 3}

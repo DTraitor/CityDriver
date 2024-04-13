@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
 public class DefaultCars : MonoBehaviour
 {
-    [CanBeNull] private CarsList carsList;
-    public CarsList CarsList
+    [CanBeNull] private static CarsList carsList;
+
+    public static CarsList CarsList
     {
         get
         {
             if (carsList == null)
             {
-                carsList = Resources.Load<CarsList>("DefaultCars");
+                carsList = Resources.Load("DefaultCars") as CarsList;
             }
             return carsList;
         }
