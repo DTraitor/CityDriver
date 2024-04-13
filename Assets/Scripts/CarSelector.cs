@@ -16,7 +16,7 @@ public class CarSelector : MonoBehaviour
     {
         foreach (var car in DefaultCars.CarsList.Cars)
         {
-            var newCar = RCC.SpawnRCC(car, carSpawnLocation.position, carSpawnLocation.rotation, true, false, false);
+            var newCar = RCC.SpawnRCC(car, carSpawnLocation.position, carSpawnLocation.rotation, false, false, false);
             newCar.gameObject.SetActive(false);
             cars.Add(newCar);
         }
@@ -35,7 +35,7 @@ public class CarSelector : MonoBehaviour
         cars[selectedCarIndex].gameObject.SetActive(true);
     }
 
-    private void SelectNextCar()
+    public  void SelectNextCar()
     {
         selectedCarIndex++;
         if (selectedCarIndex >= cars.Count)
@@ -46,7 +46,7 @@ public class CarSelector : MonoBehaviour
         UpdateCar();
     }
 
-    private void SelectPreviousCar()
+    public void SelectPreviousCar()
     {
         selectedCarIndex--;
         if (selectedCarIndex < 0)
