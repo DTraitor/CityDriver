@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarSelector : MonoBehaviour
 {
@@ -55,5 +56,10 @@ public class CarSelector : MonoBehaviour
         }
         PlayerPrefs.SetInt(PreferencesKey, selectedCarIndex);
         UpdateCar();
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }
